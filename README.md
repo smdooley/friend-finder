@@ -1,2 +1,2 @@
-friend-finder
+Friend Finder
 =============
