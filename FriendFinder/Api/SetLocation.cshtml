@@ -1,0 +1,15 @@
+﻿@{
+    if(IsAjax)
+    {
+        var userId = Request["userId"];
+        var latitude = Request["latitude"];
+        var longitude = Request["longitude"];
+
+        var db = Database.Open("FriendFinder");
+        db.Execute("UPDATE UserProfile SET Latitude = @0, Longitude = @1 WHERE UserId = @2"
+            , latitude
+            , longitude
+            , userId
+        );
+    }
+}

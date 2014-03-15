@@ -1,0 +1,23 @@
+﻿@{
+    if(IsAjax)
+    {
+        var email = Request["email"];
+        var password = Request["password"];
+
+        if (WebSecurity.Login(email, password, true)) {
+            var json = new {
+                status = true,
+                userId = WebSecurity.CurrentUserId
+            };
+            Json.Write(json, Response.Output);
+        }
+        else
+        {
+            var json = new {
+                status = false,
+                message = "Login fail"
+            };
+            Json.Write(json, Response.Output);
+        }
+    }
+}

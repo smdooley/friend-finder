@@ -1,0 +1,93 @@
+﻿@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+
+        <link rel="stylesheet" href="//code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+        <link rel="stylesheet" href="/css/site.css" />
+    </head>
+    <body>
+        <div data-role="page" id="login">
+            <div data-role="header">
+                <h1>Log In</h1>
+            </div><!-- /header -->
+            <div data-role="content">
+                @RenderPage("~/Shared/_Login.cshtml")
+            </div><!-- /content -->
+            <div data-role="footer" id="navbar" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#mappage">Map</a></li>
+                        <li><a href="#login">Log In</a></li>
+                        <li><a href="#invite">Invite</a></li>
+                        <li><a href="#auth">Authorise</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+        </div><!-- /page -->
+        <div data-role="page" id="mappage">
+            <div data-role="header">
+                <h1>Find Friends!</h1>
+            </div><!-- /header -->
+            <div data-role="content">
+                <div id="map"></div>
+            </div><!-- /content -->
+            <div data-role="footer" id="navbar" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#mappage">Map</a></li>
+                        <li><a href="#login">Log In</a></li>
+                        <li><a href="#invite">Invite</a></li>
+                        <li><a href="#auth">Authorise</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+        </div><!-- /page -->
+        <div data-role="page" id="invite">
+            <div data-role="header">
+                <h1>Invite Friends</h1>
+            </div><!-- /header -->
+            <div data-role="content">
+                <p>Integrate your invitation code here</p>
+            </div><!-- /content -->
+            <div data-role="footer" id="navbar" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#mappage">Map</a></li>
+                        <li><a href="#login">Log In</a></li>
+                        <li><a href="#invite">Invite</a></li>
+                        <li><a href="#auth">Authorise</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+        </div><!-- /page -->
+        <div data-role="page" id="auth">
+            <div data-role="header">
+                <h1>Authorise Friends</h1>
+            </div><!-- /header -->
+            <div data-role="content">
+                <p>Integrate your authorisation code here</p>
+            </div><!-- /content -->
+            <div data-role="footer" id="navbar" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#mappage">Map</a></li>
+                        <li><a href="#login">Log In</a></li>
+                        <li><a href="#invite">Invite</a></li>
+                        <li><a href="#auth">Authorise</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+        </div><!-- /page -->
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+        <script src="//maps.google.com/maps/api/js?sensor=true"></script>
+        <script src="/scripts/jquery.ui.map.full.min.js"></script>
+        <script src="/scripts/mobile.js"></script>
+    </body>
+</html>

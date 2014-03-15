@@ -1,0 +1,10 @@
+﻿@{
+    //if(IsAjax)
+    {
+        var userId = Request["userId"];
+
+        var db = Database.Open("FriendFinder");
+        var friends = db.Query("SELECT Forename, Latitude, Longitude FROM UserProfile WHERE UserId IN (SELECT FriendId FROM Friends WHERE UserId = @0)", userId);
+        Json.Write(friends, Response.Output);
+    }
+}

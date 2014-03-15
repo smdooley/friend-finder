@@ -1,0 +1,22 @@
+﻿@{
+    
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" href="/css/site.css" />
+        <!--<link rel="stylesheet" href="//code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />-->
+    </head>
+    <body>
+        @RenderBody()
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <!--<script src="//code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>-->
+        <script src="//maps.google.com/maps/api/js?sensor=true"></script>
+        <script src="/scripts/jquery.ui.map.full.min.js"></script>
+        @RenderSection("scripts", false)
+    </body>
+</html>
